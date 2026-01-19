@@ -22,13 +22,13 @@ Users can create projects, manage tasks, and track progress securely.
 ## 📸 Screenshots
 
 ### 🔐 Authentication
-![Login Page](screenshots/login.png)
+![Login Page](screenshots/login.PNG)
 
 ### 📊 Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/dashboard.PNG)
 
 ### ✅ Project Tasks
-![Project Tasks](screenshots/project-task.png)
+![Project Tasks](screenshots/project-task.PNG)
 
 ## 🌐 Live Demo
 (https://project-management-system12.netlify.app/)
