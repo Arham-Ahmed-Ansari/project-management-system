@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ================= AUTH ================= */
+.auth-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-heading h1 {
+    font-size: 32px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.auth-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.auth-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(14px);
+    padding: 30px;
+    width: 320px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    animation: fadeUp 0.8s ease;
+}
+
+.auth-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ================= INPUTS ================= */
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #00c6ff;
+}
+
+/* ================= BUTTONS ================= */
+.primary-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 114, 255, 0.6);
+}
+
+.danger-btn {
+    background: crimson;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.danger-btn:hover {
+    background: #ff4d4d;
+}
+
+/* ================= TOP BAR ================= */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* ================= DASHBOARD ================= */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding: 40px;
+    animation: fadeUp 0.6s ease;
+}
+
+/* ================= CARDS ================= */
+.card1,
+.card2,
+.card {
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(14px);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.card1 h3,
+.card2 h3,
+.card h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ================= PROJECT / TASK LIST ================= */
+.project-card,
+.task-card {
+    margin-top: 15px;
+}
+
+.getCard,
+.taskCard {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.getCard:hover,
+.taskCard:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.getCard h4 {
+    margin-bottom: 10px;
+}
+
+/* ================= ACTION BUTTONS ================= */
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* ================= TASK STATUS ================= */
+.task-card.pending {
+    border-left: 6px solid orange;
+}
+
+.task-card.completed {
+    border-left: 6px solid lightgreen;
+}
+
+/* ================= DELETE / EDIT ================= */
+.deleteBtn,
+.editBtn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.deleteBtn {
+    background: crimson;
+    color: white;
+}
+
+.editBtn {
+    background: #2ecc71;
+    color: white;
+}
+
+/* ================= EMPTY ================= */
+.empty-text {
+    text-align: center;
+    opacity: 0.7;
+    margin-top: 20px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .auth-container {
+        flex-direction: column;
+    }
+
+    .auth-card {
+        width: 100%;
+    }
+}

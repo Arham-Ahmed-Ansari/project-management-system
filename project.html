@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <h2 id="projectName">Website Redesign</h2>
+        <button class="danger-btn" onclick="backToDashboard()">Back</button>
+    </header>
+
+    <main class="dashboard">
+
+        <!-- Add Task -->
+        <div class="card">
+            <h3>Add Task</h3>
+            <input type="text" placeholder="Task Title" id="taskName">
+            <select id="taskPriority">
+                <option>Priority</option>
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+            </select>
+            <input type="text" placeholder="Task Status" id="taskStatus">
+            <input type="date" id="taskDate">
+            <button class="primary-btn" onclick="addTask()">Add Task</button>
+        </div>
+
+        <!-- Tasks List -->
+        <div class="card">
+            <h3>Tasks</h3>
+
+            <div class="task-card taskCard" id="taskCard">
+            </div>
+
+            <!-- Empty -->
+            <p class="empty-text" id="emptyTask"></p>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="./js/project.js"></script>
+
+</body>
+
+</html>

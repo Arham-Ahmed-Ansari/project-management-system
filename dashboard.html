@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard | Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <header class="top-bar">
+        <h2>Project Manager</h2>
+        <div class="user-info">
+            <span id="userEmail"></span>
+            <button class="danger-btn" onclick="logoutUser()">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="dashboard">
+
+        <!-- Add Project -->
+        <div class="card1">
+            <h3>Create Project</h3>
+            <input type="text" placeholder="Project Name" id="projectName">
+            <button class="primary-btn" onclick="addProject()">Add Project</button>
+        </div>
+
+        <!-- Projects List -->
+        <div class="card2">
+            <h3>Your Projects</h3>
+
+            <div class="project-card" id="projectCard">
+                <div class="getCard"></div>
+                <!-- <h4>Website Redesign</h4>
+                <div class="actions">
+                    <button class="primary-btn">Open</button>
+                    <button class="danger-btn">Delete</button>
+                </div> -->
+            </div>
+
+
+            <!-- Empty State -->
+            <!-- <p class="empty-text">No projects found</p> -->
+
+        </div>
+
+    </main>
+
+    <script type="module" src="./js/dashboard.js"></script>
+
+</body>
+
+</html>
